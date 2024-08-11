@@ -34,6 +34,15 @@ function getData(dataID) {
     });
 }
 
+// Aysnc - Await
+async function getAllData() {
+    await getData(1);
+    await getData(2);
+    await getData(3);
+    console.log("All data has been fetched");
+}
+
+
 //Promise Chain
 console.log("getting data 1");
 getData(1)
@@ -48,6 +57,8 @@ getData(1)
     .then((res) => {
         console.log(res);
     });
+
+
 
 // callback hell
 getData(1, () => {
